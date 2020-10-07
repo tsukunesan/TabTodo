@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/tab1">
+
+    <fragment
+        android:id="@+id/tab1"
+        android:name="com.tsukunesan.tabtodo.tab1"
+        android:label="fragment_tab1">
+        <action
+            android:id="@+id/action_tab1_to_tab2"
+            app:destination="@id/tab2" />
+        <action
+            android:id="@+id/action_tab1_to_tab3"
+            app:destination="@id/tab3" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab2"
+        android:name="com.tsukunesan.tabtodo.tab2"
+        android:label="fragment_tab2"
+        tools:layout="@layout/fragment_tab2" >
+        <action
+            android:id="@+id/action_tab2_to_tab1"
+            app:destination="@id/tab1" />
+        <action
+            android:id="@+id/action_tab2_to_tab3"
+            app:destination="@id/tab3" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab3"
+        android:name="com.tsukunesan.tabtodo.tab3"
+        android:label="fragment_tab3"
+        tools:layout="@layout/fragment_tab3" >
+        <action
+            android:id="@+id/action_tab3_to_tab1"
+            app:destination="@id/tab1" />
+        <action
+            android:id="@+id/action_tab3_to_tab2"
+            app:destination="@id/tab2" />
+    </fragment>
+</navigation>
